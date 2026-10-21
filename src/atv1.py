@@ -1,5 +1,9 @@
 import streamlit as st
+import numpy as np
 
-st.title("Laboratório de Computação Gráfica")
-st.write("Olá! Meu nome é João Pedro Salviato Burgos")
-st.write("RA: 241072037 | Turma: A")
+st.title("Computação Gráfica")
+st.write("Meu nome é João Pedro Salviato Burgos.")
+n = st.slider("Tamanho", 2, 64, 8)
+img = np.random.randint(0, 256, (n, n), dtype=np.uint8)
+st.image(img, caption=f"Imagem {n}x{n}", width=300)
+st.write(img)
