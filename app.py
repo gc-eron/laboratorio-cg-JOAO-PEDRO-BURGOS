@@ -1,5 +1,7 @@
 import streamlit as st
 
-st.title("Laboratório de Computação Gráfica")
-st.write("Olá! Meu nome é João Pedro Salviato Burgos")
-st.write("RA: 241072037 | Turma: A")
+paginas = [
+    st.Page("src/atv1.py", title="Atv 1"),
+    st.Page("src/atv2.py", title="Atv 2"),
+]
+st.navigation(paginas).run()
